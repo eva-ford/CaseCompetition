@@ -1,0 +1,472 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>landing</title>
+    
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap">
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css">
+   
+    <style>
+       #carouselBasicExample,
+      .carousel-inner,
+      .carousel-item,
+      .carousel-item.active {
+        height: 100vh;
+      }
+      .carousel-item:nth-child(1){
+        background-image: url("ttt.jpg");
+        height: 800px;
+      }
+      .carousel-item:nth-child(2){
+        background-image: url("Suzanne-Collins-Books-in-Order-e1644329128544.jpeg");
+    border: 1px solid;
+    background-repeat: no-repeat;
+    background-size: cover;
+      }
+      .carousel-item:nth-child(3){
+        background-image: url("MV5BMTgwODkwMDE1OV5BMl5BanBnXkFtZTgwNTU1MzU0MzE@._V1_.jpg");
+        height: 800px;
+        border: 1px solid;
+    background-repeat: no-repeat;
+    background-size: cover;
+      }
+      #carouselBasicExample {
+        margin-top: -66.6px;
+      }
+      .navbar {
+        z-index: 100;
+      }
+      .column-md-4 {
+        width: 32%;
+      }
+      .test1 {
+        height: 500px;
+        width: auto;
+        object-fit:cover;
+        object-position: center;
+      }
+      .mask1 {
+        padding-right: 200px;
+      }  
+      * {box-sizing: border-box}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.container {
+  position: relative;
+}
+
+/* Make the image to responsive */
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.586); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.container:hover .overlay {
+  opacity: 1;
+}
+      
+    </style>
+
+  </head>
+  <body>
+    <!-- Start your project here-->
+    <header class="mb-5">
+      <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0" href="#">
+       <strong> SC </strong>
+      </a>
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="active nav-link text=white" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="active nav-link text=white" href="#">About</a>
+          </li>
+        <li class="nav-item">
+          <a class="active nav-link text=white" href="products.html">Books</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text=white" href="#">News</a>
+        </li>
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+
+    <!-- Right elements -->
+    <div class="d-flex align-items-center">
+      <!-- Icon -->
+      <a class="text-light me-3" href="#">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+
+      <!-- Notifications -->
+      <div class="dropdown">
+        <a
+          class="text-light me-3 dropdown-toggle hidden-arrow"
+          href="#"
+          id="navbarDropdownMenuLink"
+          role="button"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"> </a>
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdownMenuLink"
+        >
+          <li>
+            <a class="dropdown-item" href="#">Some news</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Another news</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Right elements -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+<!-- Carousel wrapper -->
+<div id="carouselBasicExample" class="carousel slide carousel-fade shadow-5-strong" data-mdb-ride="carousel">
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-mdb-target="#carouselBasicExample"
+      data-mdb-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+    <button
+      type="button"
+      data-mdb-target="#carouselBasicExample"
+      data-mdb-slide-to="1"
+      aria-label="Slide 2"
+    ></button>
+    <button
+      type="button"
+      data-mdb-target="#carouselBasicExample"
+      data-mdb-slide-to="2"
+      aria-label="Slide 3"
+    ></button>
+  </div>
+
+  <!-- Inner -->
+  <div class="carousel-inner">
+    <!-- Single item -->
+    <div class="carousel-item active">
+      <div class="mask" style="background-color: hsla(0, 44%, 8%, 0.2)"></div>
+      <div class= "d-flex justify-content-center align-items-center h-100">
+      <div class="text-center text-white">
+      <h2 class="mb-4">
+        Award Winning Thrillers!
+      </h2>
+      <button type="button" class="btn btn-outline-light btn-rounded btn-lg"
+       data-mdb-ripple-color="light">View</button>
+      </div>
+     </div>
+    </div>
+
+    <!-- Single item -->
+    <div class="carousel-item" id="Home">
+       <div class="mask"></div>
+      <div class= "d-flex justify-content-center align-items-center h-100">
+      <div class="text-center text-white">
+      </div>
+     </div>
+     
+    </div>
+
+    <!-- Single item -->
+    <div class="carousel-item">
+       <div class="mask"></div>
+      <div class= "d-flex justify-content-center align-items-center h-100">
+      <div class="text-center text-white">
+      </div>
+     </div>
+      
+    </div>
+  </div>
+  <!-- Inner -->
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+  <script src="js/mdb.min.js"></script>
+</div>
+<!-- Carousel wrapper -->
+    </header>
+    <main>       
+ 
+        <section style="background-color: #eee;">
+            <div class="container py-5">
+              <h4 class="text-center mb-5"><strong>Hunger Games Series </strong></h4>
+          
+              <div class="row">
+                <div class="col-lg-3 col-md-12 mb-4">
+                  <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+                    <img src="hungergames_copy_2.png" alt="Hunger Games"
+                      class="w-100">
+                      <div class="overlay">In the ruins of a place once known as North America lies the nation of Panem, a shining Capitol surrounded by twelve outlying districts. Long ago the districts waged war on the Capitol and were defeated. As part of the surrender terms, each district agreed to send one boy and one girl to appear in an annual televised event called, "The Hunger Games," a fight to the death on live TV. The terrain, rules, and level of audience participation may change but one thing is constant: kill or be killed.</div>
+                    <a href="#!">
+                      <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+                        <div class="d-flex justify-content-start align-items-start h-100">
+                          <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">$21.24</span></h5>
+                        </div>
+                      </div>
+                      <div class="hover-overlay">
+                        <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-12 mb-4">
+                    <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+                      <img src="CatchingFire.png" alt="Catching Fire "
+                        class="w-100">
+                        <div class="overlay">Against all odds, Katniss has won the Hunger Games. She and fellow District 12 tribute Peeta Mellark are miraculously still alive. Katniss should be relieved, happy even. After all, she has returned to her family and her longtime friend, Gale. Yet nothing is the way Katniss wishes it to be. Gale holds her at an icy distance. Peeta has turned his back on her completely. And there are whispers of a rebellion against the Capitol - a rebellion that Katniss and Peeta may have helped create. </div>
+                      <a href="#!">
+                        <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+                          <div class="d-flex justify-content-start align-items-start h-100">
+                            <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">$10.98</span></h5>
+                          </div>
+                        </div>
+                        <div class="hover-overlay">
+                          <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+          
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+                    <img src="mockingjay_products_copy_2.jpeg" alt="MockingJay"
+                      class="w-100 h-200" />
+                      <div class="overlay">Katniss Everdeen, girl on fire, has survived, even though her home has been destroyed. Gale has escaped. Katniss’ family is safe. Peeta has been captured by the Capitol. District 13 really does exist. There are rebels. There are new leaders. A revolution is unfolding. </div>
+                    <a href="#!">
+                      <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+                        <div class="d-flex justify-content-start align-items-start h-100">
+                          <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">$18.49</span></h5>
+                        </div>
+                      </div>
+                      <div class="hover-overlay">
+                        <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+          
+                <div class="col-lg-3 col-md-6 mb-10">
+                  <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+                    <img src="ballad_of_songbirds_and_snakes_Productsjpeg.png" alt="Ballad of Songbirds and Snakes"
+                      class="w-100">
+                      <div class="overlay">The morning of the reaping that will kick off the tenth annual Hunger Games. The once-mighty house of Snow has fallen on hard times, its fate hanging on the slender chance that Coriolanus will be able to outcharm and outmaneuver his fellow students to mentor the winning tribute. The odds are against him. He's been given the humiliating assignment of mentoring the female tribute from District 12, the lowest of the low. Their fates are now completely intertwined -- every choice Coriolanus makes could lead to favor or failure.</div>
+                    <a href="#!">
+                      <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+                        <div class="d-flex justify-content-start align-items-start h-100">
+                          <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">$13.87</span></h5>
+                        </div>
+                      </div>
+                      <div class="hover-overlay">
+                        <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              </div>
+          </section>
+          <section style="background-color: #eee;">
+            <div class="container">
+              <h4 class="text-center mb-5"><strong>Gregor The Overlander Series</strong></h4>
+          
+              <div class="row">
+                <div class="col-lg-3 col-md-12 mb-4">
+                  <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+                    <img src="Gregor_the_Overlander_copy.jpeg" alt="gregor the overland 1st book"
+                      class="w-100">
+                      <div class="overlay">When Gregor falls through a grate in the laundry room of his apartment building, he hurtles into the dark Underland, where spiders, rats, cockroaches coexist uneasily with humans. This world is on the brink of war, and Gregor's arrival is no accident. A prophecy foretells that Gregor has a role to play in the Underland's uncertain future. Gregor wants no part of it -- until he realizes it's the only way to solve the mystery of his father's disappearance. </div>
+                    <a href="#!">
+                      <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+                        <div class="d-flex justify-content-start align-items-start h-100">
+                          <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">$7.99</span></h5>
+                        </div>
+                      </div>
+                      <div class="hover-overlay">
+                        <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+          
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+                    <img src="curse_of_the_warmbloods_copy.jpg" alt="gregor the overland 2nd book"
+                      class="w-100">
+                      <div class="overlay">In the third installment, and 
+                        with two prophecies fulfilled, Gregor is now focused on the Prophecy of Blood, which calls for Gregor and "the princess," Boots, to return to the Underland to help ward off a plague. His mom agrees to let them go--on the condition that she travels with them. When they arrive, the plague is spreading--and one of Gregor's family is stricken. Only then does he understand his role in the prophecy.</div>
+                    <a href="#!">
+                      <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+                        <div class="d-flex justify-content-start align-items-start h-100">
+                          <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">$7.29</span></h5>
+                        </div>
+                      </div>
+                      <div class="hover-overlay">
+                        <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+          
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+                    <img src="gregor_and_the_prophecy_of_bane__suzanne_collins.jpeg" alt="gregor the overland 3rd book"
+                      class="w-100">
+                      <div class="overlay">Months have passed since Gregor first fell into the strange Underland beneath New York City. This one about an ominous white rat called the Bane. The Underlanders know there is only one way to lure Gregor back to their world: by kidnapping his little sister, Boots. Gregor's quest reunites him with his bat, Ares, and the rebellious princess, Luxa. They descend into the dangerous Waterway in search of the Bane, and Gregor knows what is at stake. </div>
+                    <a href="#!">
+                      <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+                        <div class="d-flex justify-content-start align-items-start h-100">
+                          <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">$7.99</span></h5>
+                        </div>
+                      </div>
+                      <div class="hover-overlay">
+                        <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-12 mb-4">
+                    <div class="bg-image hover-zoom ripple shadow-1-strong rounded ripple-surface"> alt="gregor the overland 4th book"
+                      <img src="700.jpeg" alt="Gregor the overland 4th book"
+                        class="w-100">
+                        <div class="overlay">Now, in the fourth book, Gregor is drawn into a crisis. For generations, rats have run the mice--or "nibblers"--out of whatever lands they've claimed, keeping them on the move. But now the mice are disappearing, and the young queen Luxa is determined to find out why.When Gregor joins her on a fact-finding mission, the true fate of the mice is revealed. It is something far more sinister than Gregor or Luxa had imagined-- Will Gregor's role as warrior be put to the test?</div>
+                      <a href="#!">
+                        <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+                          <div class="d-flex justify-content-start align-items-start h-100">
+                            <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">$7.99</span></h5>
+                          </div>
+                        </div>
+                        <div class="hover-overlay">
+                          <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+          
+              <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+                    <img src="the-underland-chronicles-5-gregor-and-the-code-of-claw.jpeg" alt="gregor the overland 5thbook"
+                      class="w-100">
+                      <div class="overlay">Everyone in the Underland has been taking great pains to keep The Prophecy of Time from Gregor. Gregor suspected it says something awful but he never imagined just how awful: It calls for the warrior's death. Now, with an army of rats approaching and his mom and sister still in Regalia, Gregor the warrior must gather up his courage to help defend Regalia and get his family home safely. The entire existence of the Underland is in Gregor's hands, and time is running out. </div>
+                    <a href="#!">
+                      <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+                        <div class="d-flex justify-content-start align-items-start h-100">
+                          <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">$7.99</span></h5>
+                        </div>
+                      </div>
+                      <div class="hover-overlay">
+                        <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+        
+              </div>
+            </div>
+          </section>
+    <footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-">
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+  
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-twitter"></i
+        ></a>
+  
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+  
+      </section>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 Copyright: Eva Ford
+    </div>
+  </footer>
+</main>
+</html>
